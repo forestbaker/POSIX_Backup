@@ -13,7 +13,7 @@ This script uses 2 main tools to backup your files: TAR and RSYNC.
 First, clone the repository using git (recommended):
 
 ```bash
-git clone https://github.com/cybernova/POSIX-Backup/
+git clone https://github.com/cybernova/POSIX_Backup/
 ```
 
 or download the script manually.
