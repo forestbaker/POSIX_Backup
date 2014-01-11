@@ -44,22 +44,26 @@ For RSYNC:
 ```
 
 **Options**
+
+```
 Backup tools:
--t     Using of the TAR tool
--r     Using of the RSYNC tool
+-t          #Using of the TAR tool
+-r          #Using of the RSYNC tool
 
 General options:
--l FILE     Log file (argument required as FILE)		
+-l FILE     #Log file (argument required as FILE)		
 
 Tar options:
--e USER ID  GPG encryption (argument required as USER ID)	
--g FILE     Incremental backup (argument required as FILE)
--c 	    Standard gzip compression
+-e USER ID  #GPG encryption (argument required as USER ID)	
+-g FILE     #Incremental backup (argument required as FILE)
+-c 	        #Standard gzip compression
 
 Rsync options:
--n    Perform a trial run with no changes made
+-n          #Perform a trial run with no changes made
+```
     
-* **0 Arguments and Options:**
+* **0 Arguments:**
+
 The script reads the files to backup from a configuration file `backup_include.conf` that must exist in the directory `.posix_backup/` in the user's home directory that launched the script.
 An example of `backup_include.conf` could be something like this:
 
@@ -82,13 +86,15 @@ An example of `backup_exclude.conf` could be something like this:
 This configuration file is used, if present, in every invocation of the script.
 
 * **1 Argument:**
+
 The script checks the Real User Id of the user that launched the script and chooses a different backup strategy depending on that value:
 
   **root**: backup of /etc /home /root /var -> to the destination specified as argument.
 
   **others**: backup of the user's  home directory -> to the destination specified as argument.
 
-* **2+ Arguments**
+* **2+ Arguments:**
+
 Files to backup are specified as script's arguments.
 
 ## Tested Environments
