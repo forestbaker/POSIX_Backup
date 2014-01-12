@@ -101,7 +101,11 @@ defaultAction() {
 	if [ $RSYNC = 'enable' ]; then
 	    rsync -avh $NOACTION $EXCLUDE --log-file="$LOGFILE" --modify-window=1 "$HOME" "$1"
 	else
-	    [ ! $LOG = 'enable' ] && tar -cv $COMPRESS $INCBACKUP $INCBACKUPFILE -f  "$1" "$HOME"
+	    if [ ! $LOG = 'enable' ];then
+	    	tar -cv $COMPRESS $INCBACKUP $INCBACKUPFILE -f  "$1" "$HOME"
+	    else
+	    	tar -cv $COMPRESS $INCBACKUP $INCBACKUPFILE -f  "$1" "$HOME" >> "$LOGFILE" 2>&1
+	    fi
 	    #Encryption is done if enabled
 	    [ $ENCRYPTION = 'enable' ] && gpg -evr $ENCRYPTIONRECIPIENT "$1"
 	fi
