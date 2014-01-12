@@ -4,7 +4,7 @@ POSIX Backup is a simply but powerful **POSIX shell script** which can be used t
 
 It's written with an extensive use of comments that helps to understand and easily modify its content.
 
-**What programs need to run this script?**
+**What programs does this script need?**
 
 This script uses 2 main tools to backup your files: TAR and RSYNC.
 
