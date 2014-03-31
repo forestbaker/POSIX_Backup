@@ -4,6 +4,8 @@ POSIX Backup is a simply but powerful **POSIX shell script** which can be used t
 
 It's written with an extensive use of comments that helps to understand and easily modify its content.
 
+This script supports **incremental backups**, **compression**, **GPG encryption** and more...
+
 ## Getting started
 
 First, clone the repository using git (recommended):
@@ -25,7 +27,7 @@ Then set the execution permission to the script:
 The syntax is very simple:
 
 ```
-./POSIX_backup.sh [OPTION...] [ARGUMENT...]
+./POSIX_backup.sh [OPTION...] [SRC...] [DEST]
 ```
 
 **Options**
