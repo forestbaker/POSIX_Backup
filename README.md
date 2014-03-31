@@ -4,10 +4,6 @@ POSIX Backup is a simply but powerful **POSIX shell script** which can be used t
 
 It's written with an extensive use of comments that helps to understand and easily modify its content.
 
-**What programs does this script need?**
-
-This script uses 2 main tools to backup your files: TAR and RSYNC.
-
 ## Getting started
 
 First, clone the repository using git (recommended):
@@ -26,21 +22,10 @@ Then set the execution permission to the script:
 
 ## Usage
 
-The general syntax:
+The syntax is very simple:
 
 ```
 ./POSIX_backup.sh [OPTION...] [ARGUMENT...]
-```
-For TAR: 
-
-```
-./POSIX_backup.sh -t [OPTION...] DEST SRC...
-```
-
-For RSYNC:
-
-```
-./POSIX_backup.sh -r [OPTION...] SRC... DEST
 ```
 
 **Options**
