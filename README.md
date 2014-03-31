@@ -53,7 +53,7 @@ The script reads the files to backup from a configuration file `backup_include.c
 An example of `backup_include.conf` could be something like this:
 
 ```
--t -c /media/USB/user/Backup.tar.gz /home/user/.posix_backup /home/user/Pictures /home/user/Documents
+-t -c /home/user/.posix_backup /home/user/Pictures /home/user/Documents /media/USB/user/Backup.tar.gz
 -r -l /home/andrea/Destination/MusicBackup.log /home/user/Music /home/user/Downloads/*.mp3 /media/Destination
 ```
 Pathname expansion is supported.
